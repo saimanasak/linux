@@ -15,12 +15,12 @@ tcsh
 /bin/bash - Path to the interpreter  
 
 --------------------------------
-######Comments:
+###### Comments:
 
-# - Single line comment  
+#- Single line comment  
 
-#  
-# - Multi line comment  
+#
+#- Multi line comment  
 
 :<<COMMENT  
 ...........
@@ -28,7 +28,7 @@ COMMENT - Multi line block comment
 
 ---------------------------------
 
-######Saving a script:
+###### Saving a script:
 
 1. "nano" editor  
         nano scriptname.sh  
@@ -52,7 +52,7 @@ COMMENT - Multi line block comment
 
 ----------------------------------
 
-######Ways to execute a script:
+###### Ways to execute a script:
 
 1. Using the path - ./scriptname.sh  
 2. Using the absolute path - /path/to/scriptname.sh  

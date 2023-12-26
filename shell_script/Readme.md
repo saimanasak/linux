@@ -10,9 +10,9 @@ tcsh
  
 --------------------------------  
   
-#!/bin/bash - Shebang/Hashbang 
-#! - Shebang, indicates the path to the interpreter where the script should be executed 
-/bin/bash - Path to the interpreter 
+#!/bin/bash - Shebang/Hashbang  
+#! - Shebang, indicates the path to the interpreter where the script should be executed  
+/bin/bash - Path to the interpreter  
 
 --------------------------------
 

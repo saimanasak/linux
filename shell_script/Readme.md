@@ -18,10 +18,8 @@ tcsh
 ###### Comments:
 
 #- Single line comment  
-
 #
 #- Multi line comment  
-
 :<<COMMENT  
 ...........
 COMMENT - Multi line block comment  

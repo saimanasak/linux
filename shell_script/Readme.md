@@ -151,3 +151,23 @@ done
 ```
 
 --------------------------------
+
+##### "if" statement:  
+```
+if [ condition ]; then
+        ***action***
+else
+        ***action***
+fi
+```
+```
+if [ condition ]; then
+        ***action***
+elif [ condition ]; then
+        ***code***
+else
+        ***action***
+fi
+```
+
+--------------------------------

@@ -277,8 +277,7 @@ concatenated_string="${string1} ${string2}"
 Length:  
 ```
 string_length=${#str_variable}
-```
-```
+
 string_length=$(expr length "$str_variable")
 ```
 Comparison:  

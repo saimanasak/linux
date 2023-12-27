@@ -28,13 +28,13 @@ COMMENT - Multi line block comment
 
 ##### Saving a script:
 
-1. "nano" editor  
+###### "nano" editor  
         nano scriptname.sh  
         write the script  
         Ctrl+O and Enter  
         Ctrl+X and Enter
 
-2. "vim or vi" editor  
+###### "vim or vi" editor  
         vim scriptname.sh or vi scriptname.sh  
         write the script  
         Esc  
@@ -43,7 +43,7 @@ COMMENT - Multi line block comment
             q - quit  
             ! - force operation(should be done with caution)  
 
-3. Scripting IDE or Text editor:  
+###### Scripting IDE or Text editor:  
         create a script file  
         write  
         save the script using option in editor  

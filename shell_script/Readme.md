@@ -72,27 +72,6 @@ COMMENT - Multi line block comment
 
 ------------------------------------
 
-##### Arrays:
-
-###### Declaration:
-        1. array_name=("element0" "element1" "element2")
-
-        2. array_name[0]="element0"  
-           array_name[1]="element1"  
-           array_name[2]="element2"  
-
-        3. To declare an array explicitly - declare -a array_name  
-           TO declare an array implicitly - declare array_name  
-
-        4. Using typeset - typeset -a array_name    
-                           typeset array_name  
-###### Accessing:
-        1. All the elements: ${array_name[@]}  
-
-        2. Individual elements: ${array_name[0]} 
-
---------------------------------------
-
 ##### "for" loop:  
 
 1. Using range:  
@@ -186,6 +165,90 @@ fi
 
 --------------------------------
 
+##### Arrays:
+
+Declaration:
+        1. array_name=("element0" "element1" "element2")
+
+        2. array_name[0]="element0"  
+           array_name[1]="element1"  
+           array_name[2]="element2"  
+
+        3. To declare an array explicitly - declare -a array_name  
+           TO declare an array implicitly - declare array_name  
+
+        4. Using typeset - typeset -a array_name    
+                           typeset array_name  
+Accessing:
+        1. All the elements: ${array_name[@]}  
+
+        2. Individual elements: ${array_name[0]} 
+
+Length:  
+```
+array_length=${#array_name[@]}
+```
+Adding an element:  
+```
+array_name+=( "new_element" )
+```
+Removing an element:  
+```
+unset array_name[index_to_be_removed]
+```
+Iteration:  
+```
+for element in "${array_name[@]}";
+do
+    ***action***
+done
+```
+Slicing:  
+```
+sliced_array=("${array_name[@]:start_index:slice_length}")
+```
+Checking an element:  
+```
+[[ " ${array_name[@]} " =~ " element_to_be_checked " ]]
+```
+- This is case-sensitive, so for this we can use 'nocasematch' option.
+```
+shopt -s nocasematch
+shopt -u nocasematch #Resets to defualt
+```
+Copying:  
+```
+copied_array=("${array_name[@]}")
+```
+Concatenation:  
+```
+concatenated_array=("${array_name1[@]}" "${array_name2[@]}")
+```
+--------------------------------------
+
+###### Associated Arrays:  
+Declaration:
+```
+delcare -A associative_array
+
+associative_array["element0"]="value0"
+associative_array["element1"]="value1"
+associative_array["element2"]="value2"
+```
+Accessing:  
+```
+"${associative_array["element"]}"
+```
+Iteration: 
+``` 
+for element in "${!associative_array[@]}";
+do
+    ***action***
+done
+```
+
+--------------------------------------
+
 ##### Strings:  
 
 Usage:  
@@ -246,4 +309,6 @@ longest_prefix="${str_variable##*pattern}"
 suffix="${str_variable%pattern*}"
 longest_suffix="${str_variable%%pattern*}"
 ```
+
+------------------------------
 

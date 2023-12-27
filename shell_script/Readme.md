@@ -169,5 +169,42 @@ else
         ***action***
 fi
 ```
+```
+if [ condition1 ] || [ condition2 ]; then
+    ***action***
+else
+    ***action***
+fi
+```
+```
+if [ condition1 ] && [ condition2 ]; then
+    ***action***
+else
+    ***action***
+fi
+```
 
 --------------------------------
+
+##### Strings:  
+
+Usage:  
+1. Single quotes:  
+```
+my_string='Hello World'
+```
+2. Double quotes:  
+```
+my_string="Hello World"
+```
+3. No quotes:  
+```
+my_string=Hello
+```
+Variable Substitution:  
+- During the variable substitution we have to use only double quotes for the echo command.
+```
+name='manasa'
+echo "Hello $name"
+```
+

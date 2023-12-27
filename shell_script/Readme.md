@@ -52,29 +52,37 @@ COMMENT - Multi line block comment
 
 ##### Ways to execute a script:
 
-1. Using the path - ./scriptname.sh  
-2. Using the absolute path - /path/to/scriptname.sh  
-3. Add the script to the path and run -    
+###### Using the path
+        ./scriptname.sh  
+###### Using the absolute path 
+        /path/to/scriptname.sh  
+####### Add the script to the path and run      
         export PATH=$PATH:/path/to  
         scriptname.sh  
-4. Using sh - sh scriptname.sh  
-5. Using bash - bash scriptname.sh  
+###### Using sh 
+        sh scriptname.sh  
+###### Using bash 
+        bash scriptname.sh  
 
 ------------------------------------
 
 ##### Arrays:
 
 ###### Declaration:
-        1. array_name=("element0" "element1" "element2")  
+        1. array_name=("element0" "element1" "element2")
+
         2. array_name[0]="element0"  
            array_name[1]="element1"  
            array_name[2]="element2"  
+
         3. To declare an array explicitly - declare -a array_name  
            TO declare an array implicitly - declare array_name  
+
         4. Using typeset - typeset -a array_name    
                            typeset array_name  
 ###### Accessing:
         1. All the elements: ${array_name[@]}  
+
         2. Individual elements: ${array_name[0]} 
 
 --------------------------------------

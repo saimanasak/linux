@@ -82,54 +82,54 @@ COMMENT - Multi line block comment
 ##### "for" loop:  
 
 1. Using range:  
-        ```bash  
+        ```
         for i in {1..n};   
         do  
                 ***action***  
         done  
         ```  
-        ```bash  
+        ```
         for i in 1 2 3 .. n     
         do  
                 ***action***  
         done  
         ```  
-        ```bash  
+        ```
         for i in {1..n..increment};   
         do  
                 ***action***  
         done  
         ```  
 2. Using sequence:  
-        ```bash  
+        ```bash
         for i in {seq 1 n};   
         do  
                 ***action***  
         done  
         ```  
 3. Using command substitution:  
-        ```bash  
+        ```
         for file in $(ls);   
         do  
                 ***action***  
         done  
         ```  
 4. Using arrays:  
-        ```bash  
+        ```
         for i in "${array_name[@]}";   
         do  
                 ***action***  
         done  
         ```  
 5. Using list:  
-        ```bash  
+        ```
         for i in element0 element1 element2;     
         do  
                 ***action***  
         done  
         ```  
 6. Using "C" style:   
-        ```bash  
+        ```
         for ((i = 1; i <= n: i++));   
         do  
                 ***action***  

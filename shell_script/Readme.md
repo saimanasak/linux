@@ -207,4 +207,43 @@ Variable Substitution:
 name='manasa'
 echo "Hello $name"
 ```
+Concatenation:  
+```
+concatenated_string="${string1} ${string2}"
+```
+Length:  
+```
+string_length=${#str_variable}
+```
+```
+string_length=$(expr length "$str_variable")
+```
+Comparison:  
+```
+"$string1" == "$string2"
+```
+Substring:  
+```
+substring="${#str_variable:start:length}"
+```
+Lowercase & Uppercase:  
+```
+lowercase="${str_variable,,}"
+uppercase="${str_variable^^}"
+```
+Replacement:  
+```
+replaced_string="${original_string/substring_to_be_replaced/new_substring}"
+```
+Removal:  
+- '#' and '##' removes from the beginning till the given substring; shortest and longest.  
+- '%' and '%%' removes from the end till the given substring; shortest and longest.  
+- The difference between the output of shortest and longest can be observed when there are multiple occurences of a pattern in the string.  
+```
+prefix="${str_variable#*pattern}"
+longest_prefix="${str_variable##*pattern}"
+
+suffix="${str_variable%pattern*}"
+longest_suffix="${str_variable%%pattern*}"
+```
 

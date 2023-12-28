@@ -226,7 +226,7 @@ concatenated_array=("${array_name1[@]}" "${array_name2[@]}")
 ```
 --------------------------------------
 
-###### Associated Arrays:  
+##### Associated Arrays:  
 Declaration:
 ```
 delcare -A associative_array
@@ -311,3 +311,87 @@ longest_suffix="${str_variable%%pattern*}"
 
 ------------------------------
 
+##### "case" statement:  
+
+```
+case $variable in
+        pattern1)
+                ***action***
+                ;;
+        pattern2)
+                ***action***
+                ;;
+        pattern3)
+                ***action***
+                ;;
+        *)
+                ***action***
+                ;;
+esac
+```
+
+---------------------------------
+
+##### Functions:  
+
+Declaration:  
+```
+function function_name() 
+{
+        ***action***
+}
+```
+
+Calling:
+```
+function_name
+
+function_name "arguments"
+
+variable=$(function_name arguments)
+```
+
+-----------------------------------
+
+##### Files:  
+
+Reading:  
+```
+file_path="..."
+if [ -e "$file_path" ]; then
+    ***action***
+else
+    ***action***
+fi
+```
+Writing:  
+```
+file_path="..."
+
+#Writes data to a file.
+echo "some_text" > "$file_path"
+
+#Appends data to a file.
+echo "some_text" >> "$file_path"
+```
+Checking the file:  
+```
+[ -e "$file_path" ]
+```
+- '-e' checks if the specified file or directory present.
+- '-f' checks if the path is regular file.
+- '-d' checks if the path is a directory.
+- '-r', '-w', '-x' readable, writable, and executable respectively.
+
+Checking type of file:  
+```
+file_type=$(file -b "file_to_be_checked")
+```
+Iteration:  
+```
+for file in "$directory_path"/*;
+do
+    ***action***
+done
+
+--------------------------------

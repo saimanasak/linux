@@ -6,8 +6,8 @@ awk '/pattern/ { print $column }' file_name
 ```
 - pattern: what should be executed
 - action: what action should be done when pattern is matched.
-- Fields: $1, $2, ... are the respective first and second fields.
-- Delimiters: fields are separated by whitespaces (defualt) and can also be customized.
+- fields: $1, $2, ... are the respective first and second fields.
+- delimiters: Delimiters separates the fields. Fields are separated by whitespaces (defualt) and can also be customized.
 
 ```
 awk -F, '{ print $column }' file_name
@@ -37,7 +37,7 @@ awk '{ print substr($0, start, length) }' file_name
 - Returns an integer of a decimal number. Here, $1 indicates the first column.
 ```
 awk '{ print $1, int($1) }' file_name
-```
+```e
 - Returns the index of a substring.
 ```
 awk '{ print index($0, "substring_to_be_searched") }' file_name
@@ -55,3 +55,33 @@ awk '{
 ```
 awk 'BEGIN { for (i = 1; i <= count; i++) print rand() }'
 ```
+Formatting Output:  
+```
+awk '{ printf "Attribute1: %-10s Attribute2: %d\n", $Argument1, $Argument2 }' file_name
+```
+- %d: Decimal 
+- %s: String
+- %c: Character 
+- %f: Floating-point character
+- Modifiers:  
+    - width modifier (w): Minimum width of the field, just spaces are added.
+    ```
+    awk '{ printf "Attribute: %10s\n", $Argument1 }' file_name
+    ```
+    - Precision modifier (.n): Used for floating-point numbers.
+    ```
+    awk '{ printf "Attribute: %.2f\n", $Argument1 }' file_name
+    ```
+    - Left justify modifier (-): Left justified with a minimum specified width.
+    ```
+    awk '{ printf "Attribute: %-10s\n", $Argument1 }' file_name
+    ```
+    - Zero padding modifier (0): Zeros instead of spaces.
+    ```
+    awk '{ printf "Attribute: %05d\n", $Argument1 }' file_name
+    ```
+    - Sign modifier (+ & ''): Forces a + sign and a space.
+    ```
+    awk '{ printf "Attribute: %+d\n", $Argument1 }' file_name
+    awk '{ printf "Attribute: % d\n", $Argument1 }' file_name
+    ```

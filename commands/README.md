@@ -37,7 +37,7 @@ awk '{ print substr($0, start, length) }' file_name
 - Returns an integer of a decimal number. Here, $1 indicates the first column.
 ```
 awk '{ print $1, int($1) }' file_name
-```e
+```
 - Returns the index of a substring.
 ```
 awk '{ print index($0, "substring_to_be_searched") }' file_name

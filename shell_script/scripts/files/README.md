@@ -1,4 +1,4 @@
-#### Problem Statements:  
+### Problem Statements:  
 #### file_content_compare.sh  
 - Files: *file1.txt*, *file2.txt*, *output.txt*
 - This script is for two files.

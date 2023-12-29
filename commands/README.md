@@ -85,7 +85,7 @@ awk '{ printf "Attribute1: %-10s Attribute2: %d\n", $Argument1, $Argument2 }' fi
     awk '{ printf "Attribute: %+d\n", $Argument1 }' file_name
     awk '{ printf "Attribute: % d\n", $Argument1 }' file_name
     ```
-BEGIN block:  
+BEGIN & END blocks:  
 ```
 BEGIN { 
     initializing variables

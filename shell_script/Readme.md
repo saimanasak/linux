@@ -381,6 +381,7 @@ Checking the file:
 - '-e' checks if the specified file or directory present.
 - '-f' checks if the path is regular file.
 - '-d' checks if the path is a directory.
+- '-s' checks if a file is empty.
 - '-r', '-w', '-x' readable, writable, and executable respectively.
 
 Checking type of file:  

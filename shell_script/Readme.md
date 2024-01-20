@@ -307,6 +307,7 @@ longest_prefix="${str_variable##*pattern}"
 
 suffix="${str_variable%pattern*}"
 longest_suffix="${str_variable%%pattern*}"
+
 ```
 
 ------------------------------
